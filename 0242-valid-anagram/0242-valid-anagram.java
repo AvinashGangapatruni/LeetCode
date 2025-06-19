@@ -5,14 +5,11 @@ class Solution {
         for(int i = 0; i < s.length(); i++)
         {
             count[s.charAt(i) - 'a']++;
-        }
-        for(int i = 0; i < t.length(); i++)
-        {
             count[t.charAt(i) - 'a']--;
         }
-        for(int i = 0; i < 26; i++)
+        for(int c : count)
         {
-            if(count[i] != 0)
+            if(c != 0)
             return false;
         }
         return true;
